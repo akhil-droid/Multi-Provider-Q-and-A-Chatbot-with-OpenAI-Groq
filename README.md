@@ -21,15 +21,15 @@ git clone https://github.com/akhilsalla/multi-provider-qa-chatbot.git
 cd multi-provider-qa-chatbot
 
 ### 2. Install Dependencies
-Make sure you have Python 3.8+ and pip installed.
-pip install -r requirements.txt
+. Make sure you have Python 3.8+ and pip installed.
+. pip install -r requirements.txt
 
 ### 3. Create a .env File (Optional)
-If you want to set a default LangChain API key:
-LANGCHAIN_API_KEY=your_langchain_key
+. If you want to set a default LangChain API key:
+. LANGCHAIN_API_KEY=your_langchain_key
 
 ### 4. Run the App
-streamlit run app.py
+. streamlit run app.py
 
 ---
 
@@ -49,7 +49,7 @@ streamlit run app.py
 ---
 
 🛠️ Models Supported
-✅ OpenAI
+1. OpenAI
 . gpt-4o
 
 . gpt-4-turbo
@@ -58,7 +58,7 @@ streamlit run app.py
 
 . gpt-3.5-turbo
 
-✅ Groq
+2. Groq
 . Mixtral-8x7b
 
 . Gemma-7b-it
