@@ -18,18 +18,21 @@ An interactive chatbot built using **Streamlit** and **LangChain**, supporting b
 
 ### 1. Clone the Repository
 git clone https://github.com/akhilsalla/multi-provider-qa-chatbot.git
+
 cd multi-provider-qa-chatbot
 
 ### 2. Install Dependencies
-. Make sure you have Python 3.8+ and pip installed.
-. pip install -r requirements.txt
+Make sure you have Python 3.8+ and pip installed.
+
+pip install -r requirements.txt
 
 ### 3. Create a .env File (Optional)
-. If you want to set a default LangChain API key:
-. LANGCHAIN_API_KEY=your_langchain_key
+If you want to set a default LangChain API key:
+
+LANGCHAIN_API_KEY=your_langchain_key
 
 ### 4. Run the App
-. streamlit run app.py
+streamlit run app.py
 
 ---
 
