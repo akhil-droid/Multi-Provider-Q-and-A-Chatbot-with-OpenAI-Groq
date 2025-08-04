@@ -8,9 +8,9 @@ from langchain_groq import ChatGroq
 
 # Load .env
 load_dotenv()
-os.environ["LANGCHAIN_API_KEY"]= os.getenv("LANGCHAIN_API_KEY")
-os.environ["LANGCHAIN_PROJECT_NAME"]= "Q&A Chatbot"
-os.environ["LANGCHAIN_TRACING_v2"]= "true"
+os.environ["LANGSMITH_API_KEY"]= os.getenv("LANGSMITH_API_KEY")
+os.environ["LANGSMITH_PROJECT"]= os.getenv("LANGSMITH_PROJECT")
+os.environ["LANGSMITH_TRACING"]= os.getenv("LANGSMITH_TRACING")
 
 # Prompt template
 prompt = ChatPromptTemplate.from_messages([
@@ -32,10 +32,11 @@ def get_response(input, provider, api_key, model, temperature, max_tokens):
     output_parser = StrOutputParser()
     chain = prompt | llm | output_parser
 
-    from langchain.callbacks.tracers import LangChainTracer
-    tracer = LangChainTracer()
+    # from langchain.callbacks.tracers import LangChainTracer
+    # tracer = LangChainTracer()
+    # config={"callbacks": [tracer]}
 
-    answer = chain.invoke({"input": input}, config={"callbacks": [tracer]})
+    answer = chain.invoke({"input": input} )
     return answer
 
 # Streamlit UI
