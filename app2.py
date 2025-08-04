@@ -31,7 +31,11 @@ def get_response(input, provider, api_key, model, temperature, max_tokens):
     
     output_parser = StrOutputParser()
     chain = prompt | llm | output_parser
-    answer = chain.invoke({"input": input})
+
+    from langchain.callbacks.tracers import LangChainTracer
+    tracer = LangChainTracer()
+
+    answer = chain.invoke({"input": input}, config={"callbacks": [tracer]})
     return answer
 
 # Streamlit UI
