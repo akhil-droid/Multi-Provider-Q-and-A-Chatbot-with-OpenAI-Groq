@@ -52,7 +52,7 @@ streamlit run app.py
 ---
 
 🛠️ Models Supported
-1. OpenAI
+##### OpenAI
 . gpt-4o
 
 . gpt-4-turbo
@@ -61,7 +61,7 @@ streamlit run app.py
 
 . gpt-3.5-turbo
 
-2. Groq
+##### Groq
 . Mixtral-8x7b
 
 . Gemma-7b-it
