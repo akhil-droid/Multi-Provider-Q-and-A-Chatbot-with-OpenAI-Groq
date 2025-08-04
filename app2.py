@@ -8,6 +8,9 @@ from langchain_groq import ChatGroq
 
 # Load .env
 load_dotenv()
+os.environ["LANGCHAIN_API_KEY"]= os.getenv("LANGCHAIN_API_KEY")
+os.environ["LANGCHAIN_PROJECT_NAME"]= "Q&A Chatbot"
+os.environ["LANGCHAIN_TRACING_v2"]= "true"
 
 # Prompt template
 prompt = ChatPromptTemplate.from_messages([
@@ -56,7 +59,7 @@ query = st.text_input("You:")
 # Handle query
 if query:
     if not api_key:
-        st.warning("Please enter your API key.")
+        st.warning(" Please enter your API key.")
     else:
         with st.spinner("Generating response..."):
             response = get_response(query, provider, api_key, model, temperature, max_tokens)
