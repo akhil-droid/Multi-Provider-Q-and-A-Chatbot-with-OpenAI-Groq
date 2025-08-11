@@ -1,6 +1,6 @@
 # 🔮 Multi-Provider Q&A Chatbot (OpenAI + Groq)
 
-🔗 **Live App:** [Talk With Docs RAG Memory](https://multi-provider-q-and-a-chatbot-with-openai-groq.streamlit.app/)
+🔗 **Live App:** [Multi-Provider Q&A Chatbot](https://multi-provider-q-and-a-chatbot-with-openai-groq.streamlit.app/)
 
 An interactive chatbot built using **Streamlit** and **LangChain**, supporting both **OpenAI** and **Groq** large language models. This app allows you to switch between providers and models like `gpt-4o`, `Mixtral`, `Gemma`, and more — all from a user-friendly interface.
 
